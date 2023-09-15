@@ -1,0 +1,956 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600;700;800;900&display=swap');
+ 
+
+:root{
+  
+  --border:.2rem solid var(--black);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: 'Roboto Slab', serif;
+  scroll-behavior: smooth;
+}
+
+/*-------- headingroom part------*/
+.headingroom{
+  background-color:  rgb(14, 14, 92);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;;
+  flex-flow: column;
+  min-height: 6rem;
+
+}
+
+.headingroom h3{
+  font-size: 4rem;
+  color:white;
+  text-transform: capitalize;
+}
+
+.headingroom p a{
+  font-size: 2rem;
+  color: #C1B086 ;
+}
+
+.headingroom p span{
+  font-size: 2rem;
+  color:#C1B086;
+}
+
+.headingroom p a:hover{
+  color:#e5e911;
+}
+
+/*--------heading part-------*/
+
+
+.logo{
+  color: #C1B086;
+  font-size: 30px;
+}
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 80%;
+  margin: auto;
+}
+
+.head_container {
+  max-width: 90%;
+  margin: auto;
+}
+
+/*--------------header--------*/
+header {
+  height: 8vh;
+}
+
+.logo img {
+  width: 120px;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.hambuger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: #C1B086;
+}
+
+header ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header ul li {
+  margin-left: 3rem;
+}
+
+header ul li a {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #C1B086;
+  transition: 0.5s;
+}
+
+header ul li a:hover {
+  color: #e5e911;
+}
+
+@media only screen and (max-width: 768px) {
+  header ul {
+    display: block;
+    position: fixed;
+    left: -100%;
+    top: 5rem;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.5s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    z-index: 20;
+  }
+
+  header ul.active {
+    left: 0%;
+  }
+
+  header ul li {
+    margin: 2.5rem 0;
+  }
+
+  header ul li a {
+    color: black;
+  }
+
+  .hambuger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hambuger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hambuger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hambuger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+/*--------------header--------*/
+/*--------------home--------*/
+.home .image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.home .text {
+  max-width: 50%;
+  color: white;
+  margin: 20% 0 0 10%;
+}
+
+.home h2 {
+  font-size: 80px;
+  font-weight: 400;
+}
+
+.home p {
+  font-weight: 400;
+  line-height: 25px;
+  font-family: sans-serif;
+  font-size: 20px;
+  margin: 50px 0 0 50px;
+}
+
+button {
+  padding: 20px 40px;
+  background: none;
+  outline: none;
+  border: 2px solid white;
+  border-radius: 50px;
+  color: white;
+  margin-top: 20px;
+}
+
+.home button {
+  margin-left: 50px;
+}
+
+.home .image_item {
+  position: absolute;
+  top: 20%;
+  right: 20%;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.home .image_item img {
+  width: 140px;
+  height: 94px;
+  margin: 10px;
+  transition: 0.5s;
+}
+
+.home .image_item img.active {
+  border: 2px solid white;
+}
+
+.home .box .text {
+  position: relative;
+}
+
+.home .box .text::after {
+  position: absolute;
+  content: 'BlueMoon';
+  font-size: 120px;
+  top:-20%;
+  left: -5%;
+  font-weight: bold;
+  opacity: 0.1;
+}
+
+/*--------------home--------*/
+/*-----------log in form------*/
+.form-container form{
+  max-width: 50rem;
+  margin:0 auto;
+  border:0.2rem solid #C1B086;
+  padding:2rem;
+  text-align: center;
+  
+}
+.form-container form h3{
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color:#634908;
+}
+
+.form-container form .box{
+  margin:1rem 0;
+  padding:1.4rem;
+  color:#af8416;
+  border:0.1rem solid rgb(14, 14, 92);
+  font-size: 1.8rem;
+  width: 100%;
+  background-color: #fff;
+}
+
+.form-container form p{
+  margin-top: 1.5rem;
+  font-size: 2rem;
+  color:rgb(14, 14, 92);
+}
+
+.form-container form p a{
+  font-size: 2rem;
+  color:red;
+}
+
+.form-container form p a:hover{
+  color:black;
+}
+.pic{
+  background-image: url("../hero/banner1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+ 
+}
+.pic1{
+  background-image: url("../image/banner3.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+ 
+}
+.pic2{
+  background-image: url("../image/dining-img2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+ 
+}
+.blur{
+  background-color: #bbb4b49f;
+}
+.form-label{
+  color: #242e5a;
+  font-size: 20px;
+  
+}
+/*---------- log in form-------*/
+/*---------check form--------*/
+
+.form-container1 form{
+  max-width: 50rem;
+  margin:0 auto;
+  padding:2rem;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.568);
+  min-height: 20rem;
+  
+}
+.form-container1 form h3{
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color:#634908;
+}
+
+.form-container1 form .box{
+  margin:1rem 0;
+  padding:1.4rem;
+  color:#af8416;
+  border:0.2rem solid rgb(14, 14, 92);
+  font-size: 1.2rem;
+  width: 100%;
+  background-color: #fff;
+}
+
+.form-container1 form p{
+  margin-top: 1.5rem;
+  font-size: 1.3rem;
+  color:rgb(14, 14, 92);
+}
+
+.form-container1 form p a{
+  font-size: 2rem;
+  color:red;
+}
+
+.form-container1 form p a:hover{
+  color:black;
+}
+
+/*---------check forn-------*/
+
+/*-------------contact page--------*/
+.contact .row{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap:1.5rem;
+}
+
+.contact .row .image{
+  flex:1 1 40rem;
+}
+
+.contact .row .image img{
+  width: 100%;
+}
+
+.contact .row form{
+  border:0.2rem solid rgb(14, 14, 92);
+  flex:1 1 40rem;
+  padding:2rem;
+  text-align: center;
+}
+
+.contact .row form h3{
+  font-size: 2.5rem;
+  color:#634908;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+
+.contact .row form .box{
+  width: 100%;
+  border:0.2rem solid rgb(14, 14, 92);
+  background-color: #fff;
+  padding:1.4rem;
+  font-size: 1.8rem;
+  color:#85630e;
+  margin:.5rem 0;
+}
+
+.contact .row form textarea{
+  height: 15rem;
+  resize: none;
+}
+
+
+/*-----------contact page---------*/
+/*---------- gallery page--------*/
+.reviews .slide{
+  margin-bottom: 4rem;
+  border: 0.2rem solid rgb(14, 14, 92);
+  text-align: center;
+  margin: 5rem;
+}
+
+.reviews .slide img{
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.reviews .slide p{
+  padding:1rem 0;
+  line-height: 2;
+  font-size: 1.6rem;
+  color:rgb(14, 14, 92);
+}
+
+.reviews .slide .stars{
+  margin-top: .5rem;
+}
+
+.reviews .slide .stars i{
+  font-size:1.7rem;
+  color:yellow;
+}
+
+.reviews .slide h3{
+  font-size: 2rem;
+  color:rgb(14, 14, 92);
+  margin-top: 1.5rem;
+}
+.button{
+  display: flex;
+}
+/*-----------gallery page--------*/
+/*----------room page----------*/
+
+
+.products .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 33rem);
+  gap:1.5rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.products .box-container .box{
+  position: relative;
+  border:var(--border);
+  padding:2rem;
+  overflow: hidden;
+}
+
+.products .box-container .box .fa-eye{
+  position: absolute;
+  top:1rem;
+  display: block;
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4.3rem;
+  font-size: 2rem;
+  border:2rem rgb(14, 14, 92);
+  background-color: rgb(14, 14, 92);
+  cursor: pointer;
+  color:#C1B086;
+  text-align: center;
+}
+
+.products .box-container .box .fa-eye{
+  left: -10rem;
+}
+
+.products .box-container .box:hover .fa-eye{
+  left: 1rem;
+}
+
+.products .box-container .box .fa-eye:hover{
+  background-color: #C1B086;
+  color:rgb(14, 14, 92);
+}
+
+.products .box-container .box img{
+  height: 25rem;
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.products .box-container .box .cat{
+  font-size: 1.7rem;
+  color:rgb(14, 14, 92);
+}
+
+.products .box-container .box .cat:hover{
+  color: rgb(226, 226, 22);
+}
+
+.products .box-container .box .name{
+  font-size: 2rem;
+  margin:1rem 0;
+  color:black;
+}
+
+.products .box-container .box .flex{
+  display: flex;
+  align-items: center;
+  gap:1rem;
+}
+
+.products .more-btn a{
+  margin-top: 2rem;
+  color: white;
+  text-align: center;
+  background-color: #C1B086;
+}
+.products .more-btn a:hover{
+  color: rgb(14, 14, 92);
+}
+.title{
+  text-align: center;
+  font-size: 30px;
+  color: #3f9cc1;
+}
+/*---------room paage--------*/
+
+
+/*--------------about--------*/
+.top {
+  margin-top: 10%;
+}
+
+.mtop {
+  margin-top: 5%;
+}
+
+.left, .right {
+  width: 50%;
+}
+
+.about {
+  margin-bottom: 50px;
+}
+
+.about .img {
+  position: relative;
+}
+
+.about .image1 {
+  width: 310px;
+  height: 450px;
+}
+
+.about .image2 {
+  width: 325px;
+  height: 220px;
+  position: absolute;
+  bottom: 5px;
+  z-index: 2;
+  right: 30%;
+}
+
+.heading {
+  position: relative;
+}
+
+.heading::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100px;
+  height: 4px;
+  background: #C1B086;
+}
+
+.heading h5 {
+  font-weight: 400;
+  letter-spacing: 2px;
+  padding-top: 20px;
+  color: #5f5f5f;
+}
+
+.heading h2 {
+  font-size: 30px;
+  font-weight: 400;
+  margin: 20px 0 40px 0;
+  color: #222222;
+}
+
+.heading p {
+  margin-bottom: 20px;
+  line-height: 25px;
+  color: #5f5f5f;
+  margin: 0 0 20px 50px;
+}
+
+.heading .btn1 {
+  margin: 50px 0 20px 50px;
+}
+
+.btn1 {
+  background: #C1B086;
+  color: white;
+}
+/*--------------about--------*/
+/*--------------wrapper--------*/
+.wrapper {
+  background-image: url("../image/ami.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 480px;
+  position: relative;
+}
+
+.wrapper .text {
+  background: #3f9cc1;
+  padding: 50px;
+  width: 40%;
+  height: 600px;
+  position: absolute;
+  top: -13%;
+  right: 10%;
+  padding-top: 10%;
+  color: white;
+}
+
+.wrapper .content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 30px;
+}
+
+.wrapper h2 {
+  font-weight: 400;
+}
+
+.wrapper p {
+  margin: 20px 0 50px 0;
+  line-height: 30px;
+}
+
+.wrapper i {
+  margin: 5px 20px 0 0;
+}
+
+/*--------------wrapper--------*/
+/*--------------room--------*/
+.flex1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.room .grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.room img {
+  width: 100%;
+  height: 100%;
+}
+
+.room .box {
+  box-shadow: 0 13px 43px 0 rgb(37 46 89/10%);
+}
+
+.room .text {
+  padding: 20px;
+}
+
+.room h3 {
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.room p span {
+  font-size: 12px;
+  color: grey;
+}
+
+.room p {
+  font-size: 20px;
+}
+
+/*--------------room--------*/
+/*--------------wrapper2--------*/
+.wrapper2 {
+  background-image: url("../image/w1.jpg");
+}
+
+.wrapper2 .text {
+  left: 10%;
+}
+
+.wrapper2 h5,
+.wrapper2 h2 {
+  color: white;
+}
+
+.wrapper2 img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.wrapper2 .para h5 {
+  font-size: 13px;
+  font-weight: 300;
+  margin-top: 5px;
+}
+
+.wrapper2 .para {
+  margin-left: 10%;
+}
+
+/*--------------wrapper2--------*/
+/*--------------restaurant--------*/
+.restaurant img {
+  width: 100%;
+  height: 100%;
+}
+
+.restaurant .right {
+  padding: 50px 50px 50px 100px;
+}
+
+.restaurant h2 {
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.restaurant .text p {
+  margin-bottom: 50px;
+  line-height: 25px;
+}
+
+.accordionItem {
+  margin-top: 30px;
+}
+
+.accordionItem p {
+  font-size: 15px;
+  opacity: 0.8;
+  font-family: sans-serif;
+  line-height: 20px;
+}
+
+.accordionIHeading {
+  cursor: pointer;
+  width: 100%;
+  border-radius: 3px;
+  font-weight: 400;
+  font-size: 17px;
+  color: #C1B086;
+  margin-bottom: 20px;
+}
+
+.close .accordionItemContent {
+  height: 0px;
+  transition: height 1s ease-out;
+  transform: scaleY(0);
+  float: left;
+  display: block;
+  background-color: #fff;
+}
+
+.open .accordionItemContent {
+  padding: 30px;
+  background-color: #fff;
+  width: 100%;
+  margin: 0 0 10px 0;
+  display: block;
+  transform: scaleY(1);
+  transform-origin: top;
+  transition: transform 0.4s ease;
+  box-sizing: border-box;
+  box-shadow: 0 13px 43px 0 rgb(37 46 89 / 10%);
+}
+
+/*--------------restaurant--------*/
+/*--------------gallary--------*/
+.gallary img {
+  width: 270px;
+  height: 350px;
+}
+
+.owl-carousel .owl-next,
+.owl-carousel .owl-prev {
+  height: 50px;
+  position: absolute;
+  width: 50px;
+  cursor: pointer;
+  top: 35%;
+  background: white !important;
+  transition: 0.5s;
+}
+
+.owl-carousel .owl-prev {
+  left: 33px;
+}
+
+.owl-carousel .owl-next {
+  right: 33px;
+}
+
+.owl-carousel .owl-next:hover,
+.owl-carousel .owl-prev:hover {
+  background: #C1B086 !important;
+}
+
+/*--------------gallary--------*/
+/*--------------map--------*/
+.map iframe {
+  width: 100%;
+}
+
+/*--------------map--------*/
+/*--------------footer--------*/
+footer h3 {
+  margin-bottom: 20px;
+}
+
+footer li {
+  margin-bottom: 15px;
+  transition: 0.5s;
+}
+
+footer li:hover {
+  color: #C1B086;
+  cursor: pointer;
+}
+
+/*--------------footer--------*/
+@media only screen and (max-width:768px) {
+  .home .box .text {
+    max-width: 100%;
+  }
+
+  .home .box .text::after,
+  .home .image_item {
+    display: none;
+  }
+
+  .restaurant .container,
+  .about .container,
+  .book .container {
+    flex-direction: column;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .book {
+    margin-top: 10%;
+    height: auto;
+  }
+
+  .book .search {
+    width: 100%;
+  }
+
+  .book .search input {
+    margin-top: 0;
+  }
+
+  .left, .right {
+    width: 100%;
+  }
+
+  .wrapper .text {
+    width: 80%;
+  }
+
+  .room {
+    margin-bottom: 100px;
+  }
+
+  .room .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .restaurant .right {
+    padding: 0;
+    margin-top: 50px;
+  }
+
+  footer .payment {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .home .text {
+    margin: 10% 0 0 0;
+  }
+
+  .home h1 {
+    font-size: 40px;
+  }
+
+  .about p,
+  .home p {
+    margin: 50px 0 0 0;
+  }
+
+  .wrapper .text {
+    padding: 10px;
+    height: 600px;
+  }
+
+  .heading_top {
+    margin-top: 100px;
+  }
+
+  .heading_top button {
+    display: none;
+  }
+
+  .restaurant .flex {
+    flex-direction: column-reverse;
+  }
+}
+footer{
+  color: white;
+  background-color: black;
+}
+.bookingg{
+  color: rgb(255, 255, 255);
+  font-family: fantasy;
+}
