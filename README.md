@@ -1,2 +1,0 @@
-# msuhotelwebsite
-Hotel Website Project

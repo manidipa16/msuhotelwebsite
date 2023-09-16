@@ -1,2 +1,0 @@
-# HOTELBLUEMOON
-Website project
